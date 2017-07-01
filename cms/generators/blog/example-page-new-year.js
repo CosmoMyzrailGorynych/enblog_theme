@@ -1,9 +1,9 @@
 {
 	display_title: 'Hey there!',
 	published: true,
-	$date_value: '2017-12-31',
+	$date_value: '2017-07-12',
 	$date_type: 'date',
-	date: 'Saturday, 01 July, 2017',
+	date: 'Wednesday, 12 July, 2017',
 	$marked_markdown: true,
 	$marked_type: 'textarea',
 	marked: 'This is an example post!',

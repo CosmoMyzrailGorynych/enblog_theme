@@ -1,9 +1,9 @@
 {
 	display_title: 'Another example page',
 	published: true,
-	$date_value: '2018-01-09',
+	$date_value: '2017-05-02',
 	$date_type: 'date',
-	date: 'Tuesday, 09 January, 2018',
+	date: 'Tuesday, 02 May, 2017',
 	$marked_markdown: true,
 	$marked_type: 'textarea',
 	marked: 'This is an example post!',
