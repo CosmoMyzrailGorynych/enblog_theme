@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{display_title}} — {{global.site_name}}</title>
+		{{>head}}
+	</head>
+	<body class="blog">
+		{{#>body}}
+			<article class="blog-anArticle">
+				<h1 class="anArticle-aHeader">{{display_title}}</h1>
+				<div class="blog-anIntro">
+					<p>By {{global.author_name}} • <time datetime="{{$date_value}} 12:00">{{date}}</time></p>
+				</div>
+				{{#if global.show_table_of_content}}
+					<p>
+						{{#each abstracted_content.contents}}
+							<a href="#{{link}}" class="blog-Contents-{{level}}">{{heading}}</a>
+							{{#unless @last}}
+								<br/>
+							{{/unless}}
+						{{/each}}
+					</p>
+				{{/if}}
+				{{#if teaser.cover}}
+					{{#if global.show_cover_images_on_blog_post_pages}}
+						<img src="{{teaser.cover}}" class="aBlogCover">
+					{{/if}}
+				{{/if}}
+				{{{abstracted_content.marked_marked}}}
+				{{#if global.show_author_info_in_posts}}
+					<div class="anAuthorCard">
+						<div class="anAuthorCard-anAvatar" style="background-image: url({{global.author_avatar}});"></div>
+						<p class="anAuthorCard-aName">{{global.author_name}}</h3>
+						<p>{{{global.author_bio}}}</p>
+						<div style="clear: both;"></div>
+					</div>
+				{{/if}}
+				{{#if global.end_of_post_HTML}}
+					{{{global.end_of_post_HTML}}}
+				{{/if}}
+				{{#if enable_comments}}
+					<h2>Comments</h2>
+					<section class="Comments">
+						{{{global.comment_service_code}}}
+					</section>
+				{{/if}}
+			</article>
+		{{/body}}
+	</body>
+</html>

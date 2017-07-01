@@ -1,0 +1,20 @@
+<header>
+    <div class="inner">
+        <h1><a href="/">{{global.site_name}}</a></h1>
+        {{#if global.site_description}}
+            <p>{{global.site_description}}</p>
+        {{/if}}
+    </div>
+</header>
+<nav class="aSiteNav">
+    <div class="inner">
+        {{#if global.show_archive_link}}
+            <a href="/archive/">{{global.archive_link_text}}</a>
+        {{/if}}
+        {{#navlinks}}
+            {{#each this}}
+                <a href="/pages/{{this.page_slug}}/">{{this.content.navigation_title}}</a>
+            {{/each}}
+        {{/navlinks}}
+    </div>
+</nav>

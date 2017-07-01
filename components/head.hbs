@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+body {
+background-image: url({{global.background_image}});
+{{#if global.tile_background}}
+background-repeat: repeat;
+background-position: center center;
+{{else}}
+background-size: 100% auto;
+background-size: cover;
+{{/if}}
+font-family: {{global.body_text_font_family}};
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: {{global.headers_font_family}};
+{{#if global.accented_headers}}
+color: {{global.accent_color}};
+{{/if}}
+}
+a {
+color: {{global.accent_color}};
+}
+.aBackgroundTint {
+background: {{global.background_tint_color}};
+opacity: 0.{{global.background_tint}}
+}
+.inner {
+width: {{global.blog_width}};
+}
+</style>
+<link rel="stylesheet" href="/assets/css/main.css">

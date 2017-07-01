@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{display_name}} — {{global.site_name}}</title>
+		{{>head}}
+	</head>
+	<body>
+		{{#>body}}
+			<article>
+				<h2>{{display_name}}</h2>
+				{{#blog_archive}}
+					{{#each this}}
+						<h3>{{title}}</h3>
+						{{#each pages}}
+							<a href="/blog/{{page_slug}}/">{{content.display_title}}</a>
+							{{#unless @last}}
+							<br />
+							{{/unless}}
+						{{/each}}
+					{{/each}}
+				{{/blog_archive}}
+			</article>
+		{{/body}}
+	</body>
+</html>

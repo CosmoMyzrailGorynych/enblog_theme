@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{display_title}} — {{global.site_name}}</title>
+		{{>head}}
+	</head>
+	<body class="blog">
+		{{#>body}}
+			<article class="blog-aPage">
+				<h1 class="aPage-aHeader">{{display_title}}</h1>
+				{{{abstracted_content.marked_marked}}}
+				{{#if enable_comments}}
+					<h2>Comments</h2>
+					<section class="Comments">
+						{{{global.comment_service_code}}}
+					</section>
+				{{/if}}
+			</article>
+		{{/body}}
+	</body>
+</html>

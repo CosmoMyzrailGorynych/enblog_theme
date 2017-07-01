@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{global.site_name}}</title>
+		{{>head}}
+	</head>
+	<body>
+		{{#>body}}
+			{{#blog}}
+				{{#each this.entries}}
+					<article class="aTeaser">
+						{{#if content.teaser.cover}}
+							<img class="aBlogCover" src="{{content.teaser.cover}}" />
+						{{/if}}
+						<h2>
+							<a href="/blog/{{page_slug}}/">{{content.display_title}}</a>
+						</h2>
+						{{{content.teaser.abstracted_content.marked_marked}}}
+						<time>{{content.date}}</time>
+						<b><a href="/blog/{{page_slug}}">{{../../global.read_more_link_label}}</a></b>
+						<div style="clear: both;"></div>
+					</article>
+				{{/each}}
+				{{#unless this.entries.length}}
+					<article>
+						<p>This blog has no posts. OMG!</p>
+					</article>
+				{{/unless}}
+				{{>pagination}}
+			{{/blog}}
+		{{/body}}
+	</body>
+
+	{{!-- <script data-main="/assets/js/main.js" src="/assets/vendor/requirejs/require.js"></script> --}}
+</html>

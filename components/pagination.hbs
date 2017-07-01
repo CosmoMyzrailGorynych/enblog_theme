@@ -1,0 +1,9 @@
+<nav class="aPagination">
+    {{#unless first}}
+        <a href="{{prev_page}}" class="aPagination-aPrevious">{{previous_page_label}}</a>
+    {{/unless}}
+    {{#unless last}}
+        <a href="{{next_page}}" class="aPagination-aNext">{{next_page_label}}</a>
+    {{/unless}}
+    <div style="clear: both;"></div>
+</nav>
