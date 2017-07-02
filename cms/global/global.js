@@ -31,7 +31,7 @@
 	show_archive_link: true,
 	archive_link_text: 'Archive',
 	read_more_link_label: 'Read more…',
-	comment_service_code: '<!-- Input here your Disqus or Muut commenting code -->\nSet up your commenting system  in global settings of your project.',
+	comment_service_code: '<a class="muut" href="https://muut.com/i/comigo/comments" type="dynamic">comigo</a> <script src="//cdn.muut.com/1/moot.min.js"></script>',
 	$comment_service_code_type: 'textarea',
 	title_widgets: 'Widgets',
 	$title_widgets_type: 'title',
