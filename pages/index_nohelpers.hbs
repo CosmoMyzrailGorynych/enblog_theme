@@ -9,14 +9,14 @@
 			{{#each entries}}
 				<article class="aTeaser">
 					{{#if content.teaser.cover}}
-						<img class="aBlogCover" src="{{content.teaser.cover}}" />
+						<img class="aBlogCover" src="/enduro_demo{{content.teaser.cover}}" />
 					{{/if}}
 					<h2>
-						<a href="/blog/{{page_slug}}/">{{content.display_title}}</a>
+						<a href="/enduro_demo/blog/{{page_slug}}/">{{content.display_title}}</a>
 					</h2>
 					{{{content.teaser.abstracted_content.marked_marked}}}
 					<time>{{content.date}}</time>
-					<b><a href="/blog/{{page_slug}}">{{../global.read_more_link_label}}</a></b>
+					<b><a href="/enduro_demo/blog/{{page_slug}}">{{../global.read_more_link_label}}</a></b>
 					<div style="clear: both;"></div>
 				</article>
 			{{/each}}
