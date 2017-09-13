@@ -1,5 +1,5 @@
 {
-  "name": "enduro_scaffolding",
+  "name": "enduro-enblog-theme",
   "version": "1.0.0",
   "description": "",
   "main": "assets/vendor/enduro/index.js",
@@ -7,7 +7,7 @@
     "start": "node_modules/.bin/enduro start"
   },
   "author": "author goes here",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.0",
     "enduro": "*",
